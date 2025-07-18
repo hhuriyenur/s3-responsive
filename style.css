@@ -32,6 +32,7 @@ body {
 }
 
 .menu-bg {
+  flex-direction: column;
   background-color: #ededf9;
   border-bottom: 1px solid #e3e1f9
 }
@@ -46,7 +47,7 @@ body {
 header {
   padding: 25px 15px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -59,12 +60,13 @@ nav {
   display: flex;
   gap: 15px;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 0.75rem;
 }
 
 nav a {
   color: #0066c8;
   text-decoration: none;
+  width: 25%;
 }
 
 nav a:hover {
@@ -79,7 +81,7 @@ nav a:hover {
   height: 400px;
   background-color: #080808;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   flex-direction: column;
   padding: 40px;
   border-radius: 15px;
@@ -87,7 +89,7 @@ nav a:hover {
 
 .hero h1 {
   margin: 0;
-  font-size: 40px;
+  font-size: 2rem;
   color: #70d000;
 }
 
@@ -97,3 +99,27 @@ nav a:hover {
 }
 
 /* hero alanı bitti */
+@media (max-width:481px){
+  header{
+    flex-direction:column;
+    align-items: stretch;
+    gap: 15px;
+    padding: 20px 10px 15px 10px;
+
+  }
+}
+@media (max-width:481px){
+  .hero{
+    margin-top: 0;
+    border-radius: 0;
+    height: 70vh;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width:481px){
+  html{
+    font-size: 16px;
+  }
+}
